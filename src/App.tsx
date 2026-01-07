@@ -1,9 +1,13 @@
 import './App.css'
 import {useEffect} from "react";
+import {client} from "./shared/api/client.ts";
 
 function App() {
 
     useEffect(() => {
+
+client.
+
         fetch('https://musicfun.it-incubator.app/api/1.0/playlists',
             {
                 headers: {
@@ -18,7 +22,6 @@ function App() {
     return (
         <>
             Hello!!!
-
         </>
     )
 }
