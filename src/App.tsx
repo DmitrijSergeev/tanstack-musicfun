@@ -1,23 +1,9 @@
 import './App.css'
-import {useEffect} from "react";
-import {client} from "./shared/api/client.ts";
+import {client} from "./shared/api/client";
 
 function App() {
 
-    useEffect(() => {
-
-client.
-
-        fetch('https://musicfun.it-incubator.app/api/1.0/playlists',
-            {
-                headers: {
-                    'API-KEY': '3897f0cc-ec64-4ebd-9093-9d4dbb072be0'
-                }
-            }
-        ).then(res => res.json()).then(
-            res => console.log(res)
-        )
-    }, [])
+    client.GET('/playlists')
 
     return (
         <>
